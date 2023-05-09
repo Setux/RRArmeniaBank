@@ -1,6 +1,5 @@
-import { useContext } from "react";
-import { webAppContext } from "./contexts/appContext";
 import { MetroSpinner } from "react-spinners-kit";
+
 function App() {
   return (
     <div className="App">
