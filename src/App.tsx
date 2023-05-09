@@ -6,7 +6,7 @@ function App() {
   console.log(app);
 
   const sendData = () => {
-    app.sendData("this is data");
+    app.sendData("Bogdan huesos");
   };
   console.log(app.initData)
   return (
