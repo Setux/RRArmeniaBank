@@ -8,7 +8,7 @@ function App() {
   const sendData = () => {
     app.sendData("this is data");
   };
-  console.log(JSON.parse(app.initData))
+  console.log(app.initData)
   return (
     <div className="App">
       {app.version ? (
