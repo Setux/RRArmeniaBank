@@ -15,7 +15,7 @@ function App() {
         <div className="layout">
           <button onClick={sendData}>click me</button>
           <p>initDataUnsafe</p>
-          <code>{JSON.stringify(app.initData, null, 2)}</code>
+          <code>{JSON.parse(app.initData)}</code>
         </div>
       ) : (
         "loading"
