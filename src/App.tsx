@@ -8,14 +8,14 @@ function App() {
   const sendData = () => {
     app.sendData("this is data");
   };
-
+  console.log(JSON.parse(app.initData))
   return (
     <div className="App">
       {app.version ? (
         <div className="layout">
           <button onClick={sendData}>click me</button>
           <p>initDataUnsafe</p>
-          <code>{JSON.parse(app.initData)}</code>
+          <code></code>
         </div>
       ) : (
         "loading"
