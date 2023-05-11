@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     if (app) {
-      getBalance(app.initDataUnsafe.user.id);
+      getBalance(app.initDataUnsafe?.user?.id);
     }
   }, [app])
 
