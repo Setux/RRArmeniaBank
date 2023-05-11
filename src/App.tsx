@@ -7,7 +7,7 @@ function App() {
   const API = useContext(apiContext);
 
   useEffect(() => {
-    if (app && API) {
+    if (app.initDataUnsafe && API.id) {
       console.log(API);
       API.getBalance();
     }
