@@ -14,7 +14,7 @@ function App() {
   }, [app, API])
 
   return (
-    (app.initDataUnsafe && API.id) ? <div className="app">test</div> : <Loader isLoading />
+    (app.initDataUnsafe && API.id) ? <Loader isLoading /> : <Loader isLoading />
   );
 }
 
