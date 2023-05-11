@@ -8,6 +8,7 @@ function App() {
 
   useEffect(() => {
     if (app && API) {
+      console.log(API);
       API.getBalance();
     }
   }, [app, API])
