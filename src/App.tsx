@@ -4,7 +4,7 @@ import {
   MenuUnfoldOutlined,
   UploadOutlined,
   UserOutlined,
-  VideoCameraOutlined,
+  StockOutlined,
 } from '@ant-design/icons';
 import Loader from "./components/Loader/Loader";
 import { apiContext } from "./contexts/apiContext";
@@ -45,13 +45,8 @@ function App() {
               },
               {
                 key: '2',
-                icon: <VideoCameraOutlined />,
+                icon: <StockOutlined />,
                 label: 'nav 2',
-              },
-              {
-                key: '3',
-                icon: <UploadOutlined />,
-                label: 'nav 3',
               },
             ]}
           />
