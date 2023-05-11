@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import WebAppProvider from "./contexts/appContext";
+import ApiProvider from "./contexts/apiContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <WebAppProvider>
-      <App />
+      <ApiProvider>
+        <App />
+      </ApiProvider>
     </WebAppProvider>
   </React.StrictMode>
 );

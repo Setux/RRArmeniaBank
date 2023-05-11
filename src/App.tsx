@@ -1,15 +1,16 @@
+import { apiContext } from "./contexts/apiContext";
 import { webAppContext } from "./contexts/appContext";
 import { useContext, useEffect } from "react";
-import { getBalance } from "./api";
 
 function App() {
-  const app  = useContext(webAppContext);
+  const app = useContext(webAppContext);
+  const API = useContext(apiContext);
 
   useEffect(() => {
-    if (app) {
-      getBalance(app.initDataUnsafe?.user?.id);
+    if (app && API) {
+      API.getBalance();
     }
-  }, [app])
+  }, [app, API])
 
   return (
     <div className="App">

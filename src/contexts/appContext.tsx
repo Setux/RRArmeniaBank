@@ -1,19 +1,19 @@
-import React, { createContext, useEffect, useState } from "react";
+import React from "react";
 
 interface IProps {
   children: React.ReactNode;
 }
 
-export const webAppContext = createContext<WebApp>({} as WebApp);
+export const webAppContext = React.createContext<WebApp>({} as WebApp);
 
 const WebAppProvider = ({ children }: IProps) => {
-  const [app, setApp] = useState({} as WebApp);
+  const [app, setApp] = React.useState({} as WebApp);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setApp(window.Telegram.WebApp);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!app) return;
     app.ready && app.ready();
   }, [app]);
