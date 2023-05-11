@@ -1,3 +1,4 @@
+import Loader from "./components/Loader/Loader";
 import { apiContext } from "./contexts/apiContext";
 import { webAppContext } from "./contexts/appContext";
 import { useContext, useEffect } from "react";
@@ -8,14 +9,12 @@ function App() {
 
   useEffect(() => {
     if (app.initDataUnsafe && API.id) {
-      console.log(API);
       API.getBalance();
     }
   }, [app, API])
 
   return (
-    <div className="App">
-    </div>
+    (app.initDataUnsafe && API.id) ? <div className="app">test</div> : <Loader isLoading />
   );
 }
 

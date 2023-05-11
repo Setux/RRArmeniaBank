@@ -38,3 +38,9 @@ button {
 code {
   width: 100%;
 }
+
+.spinner-center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
