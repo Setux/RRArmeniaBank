@@ -2,7 +2,6 @@ import { Layout, Menu, Button, theme } from 'antd';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
   UserOutlined,
   StockOutlined,
 } from '@ant-design/icons';
