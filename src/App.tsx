@@ -6,7 +6,9 @@ function App() {
   const app  = useContext(webAppContext);
 
   useEffect(() => {
-    getBalance(app.initDataUnsafe.user.id);
+    if (app) {
+      getBalance(app.initDataUnsafe.user.id);
+    }
   }, [app])
 
   return (
