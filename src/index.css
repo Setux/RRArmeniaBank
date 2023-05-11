@@ -12,7 +12,7 @@ body {
   color-scheme: var(--tg-color-scheme);
 }
 
-.root {
+#root {
   height: 100vh;
   width: 100%;
 }
