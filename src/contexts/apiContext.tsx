@@ -14,7 +14,7 @@ const ApiProvider = ({children}: Props) => {
     const app = React.useContext(webAppContext);
 
     React.useEffect(() => {
-        if (app) {
+        if (app && app.initDataUnsafe.user) {
             setApi(new API(app.initDataUnsafe.user.id))
         }
     }, [app])
