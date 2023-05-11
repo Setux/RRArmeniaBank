@@ -1,7 +1,6 @@
-import { MetroSpinner } from "react-spinners-kit";
 import { webAppContext } from "./contexts/appContext";
 import { useContext, useEffect } from "react";
-import { getBalance } from "./api";
+// import { getBalance } from "./api";
 
 function App() {
   const app  = useContext(webAppContext);
@@ -9,7 +8,7 @@ function App() {
   useEffect(() => {
     console.log(app.initDataUnsafe);
     // getBalance(app.initDataUnsafe);
-  }, [])
+  }, [app])
 
   return (
     <div className="App">
