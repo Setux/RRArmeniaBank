@@ -23,7 +23,7 @@ export class API {
     }
 
     async getBalance() {
-        const responce = await fetch(`https://api.ryodan.dev/getBalance?type=all&id=${id}`);
+        const responce = await fetch(`https://api.ryodan.dev/getBalance?type=all&id=${this.id}`);
         const data: GetBalanceResponce<number> = await responce.json()
         return data;
     }
