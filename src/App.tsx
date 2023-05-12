@@ -4,6 +4,7 @@ import {
   MenuUnfoldOutlined,
   UserOutlined,
   StockOutlined,
+  HistoryOutlined
 } from '@ant-design/icons';
 import Loader from "./components/Loader/Loader";
 import { apiContext } from "./contexts/apiContext";
@@ -30,7 +31,7 @@ function App() {
   return (
     (app.initDataUnsafe && API.id) ?
       <Layout>
-        <Sider trigger={null} collapsible collapsed={collapsed}>
+        <Sider trigger={null} collapsible collapsed={collapsed} width={80} collapsedWidth={40}>
           <div className="logo" />
           <Menu
             theme="dark"
@@ -40,13 +41,18 @@ function App() {
               {
                 key: '1',
                 icon: <UserOutlined />,
-                label: 'nav 1',
+                label: 'Профиль',
               },
               {
                 key: '2',
                 icon: <StockOutlined />,
-                label: 'nav 2',
+                label: 'Рынок',
               },
+              {
+                key: '3',
+                icon: <HistoryOutlined />,
+                label: 'История',
+              }
             ]}
           />
         </Sider>
