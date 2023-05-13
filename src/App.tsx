@@ -17,7 +17,7 @@ function App() {
   const app = useContext(webAppContext);
   const API = useContext(apiContext);
 
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
     const {
       token: { colorBgContainer },
     } = theme.useToken();
@@ -31,7 +31,7 @@ function App() {
   return (
     (app.initDataUnsafe && API.id) ?
       <Layout style={{height: '100%'}}>
-        <Sider trigger={null} collapsible collapsed={collapsed} collapsedWidth={40}>
+        <Sider trigger={null} collapsible collapsed={collapsed} collapsedWidth={40} width={120}>
           <div className="logo" />
           <Menu
             theme="dark"
