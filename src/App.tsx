@@ -30,8 +30,8 @@ function App() {
 
   return (
     (app.initDataUnsafe && API.id) ?
-      <Layout>
-        <Sider trigger={null} collapsible collapsed={collapsed} collapsedWidth={40} style={{height: '100%'}}>
+      <Layout style={{height: '100%'}}>
+        <Sider trigger={null} collapsible collapsed={collapsed} collapsedWidth={40}>
           <div className="logo" />
           <Menu
             theme="dark"
