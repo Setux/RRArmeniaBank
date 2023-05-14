@@ -29,7 +29,7 @@ function App() {
   return (
     (app.initDataUnsafe && API.id) ?
       <Layout style={{height: '100%'}}>
-        <Sider collapsible collapsed={collapsed} collapsedWidth={40} width={160} onCollapse={(val) => setCollapsed((val))}>
+        <Sider collapsible collapsed={collapsed} collapsedWidth={50} width={150} onCollapse={(val) => setCollapsed((val))}>
           <div className="logo" />
           <Menu
             theme="dark"
