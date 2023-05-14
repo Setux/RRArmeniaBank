@@ -6,6 +6,7 @@ import {UploadOutlined} from '@ant-design/icons';
 import Loader from "../../components/Loader/Loader";
 import Avatar from "../../components/Avatar/Avatar";
 import Button from "../../components/Button/Button";
+import BalanceList from "../../components/BalanceList/BalanceList";
 
 const ProfilePage = () => {
     const API = useContext(apiContext);
@@ -32,6 +33,8 @@ const ProfilePage = () => {
         <div className="profile_action">
             <Button type="primary" disabled handleClick={() => console.log('bogdan hui')} icon={<UploadOutlined />}>Вывод средств</Button>
         </div>
+        <Divider />
+        <BalanceList balance={user.balance}/>
     </div> : 
     <Loader isLoading/>}</div>
 }
