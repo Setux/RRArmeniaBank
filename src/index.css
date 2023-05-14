@@ -96,3 +96,7 @@ code {
 .ant-card-body {
   padding: 10px 24px !important;
 }
+
+.ant-col>.ant-list-item {
+  margin-block-end: 4px;
+}
