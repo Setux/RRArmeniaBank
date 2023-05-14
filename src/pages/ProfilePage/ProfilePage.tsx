@@ -19,7 +19,7 @@ const ProfilePage = () => {
         }
     }, [API])
     
-    return <div>{user.name ? <Avatar url={user.pfp} /> : <Loader isLoading/>}</div>
+    return <div className="profile_container">{user.name ? <Avatar url={user.pfp} /> : <Loader isLoading/>}</div>
 }
 
 export default ProfilePage
