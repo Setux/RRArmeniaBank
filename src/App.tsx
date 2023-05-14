@@ -34,13 +34,13 @@ function App() {
           style={{
             margin: '24px 16px',
             padding: 24,
-            minHeight: 280,
+            height: 'min-content',
             background: colorBgContainer,
           }}
         >
           <ProfilePage />
         </Content>
-        <Footer style={{padding: 0}}>
+        <Footer style={{padding: 0, position: 'sticky', bottom: 0, zIndex: 1, width: '100%' }}>
         <Menu
           style={{justifyContent: 'center'}}
           theme="dark"
