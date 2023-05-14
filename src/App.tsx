@@ -40,8 +40,9 @@ function App() {
         >
           <ProfilePage />
         </Content>
-        <Footer>
+        <Footer style={{padding: 0}}>
         <Menu
+          style={{justifyContent: 'center'}}
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={['1']}
