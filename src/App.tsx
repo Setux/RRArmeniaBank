@@ -1,7 +1,5 @@
-import { Layout, Menu, Button, theme } from 'antd';
+import { Layout, Menu, theme } from 'antd';
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   UserOutlined,
   StockOutlined,
   HistoryOutlined
