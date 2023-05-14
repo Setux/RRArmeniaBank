@@ -17,8 +17,8 @@ body {
 }
 
 #root {
-  height: min-content;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: min-content;
   width: 100%;
 }
 
