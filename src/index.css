@@ -90,5 +90,5 @@ code {
 }
 
 .ant-card-body {
-  padding: 10px 24px;
+  padding: 10px 24px !important;
 }
