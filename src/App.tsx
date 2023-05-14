@@ -10,7 +10,7 @@ import { webAppContext } from "./contexts/appContext";
 import { useContext, useEffect, useState } from "react";
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content, Footer } = Layout;
 
 function App() {
   const app = useContext(webAppContext);
@@ -67,6 +67,30 @@ function App() {
           >
             <ProfilePage />
           </Content>
+          <Footer>
+          <Menu
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={['1']}
+            items={[
+              {
+                key: '1',
+                icon: <UserOutlined />,
+                label: 'Профиль',
+              },
+              {
+                key: '2',
+                icon: <StockOutlined />,
+                label: 'Рынок',
+              },
+              {
+                key: '3',
+                icon: <HistoryOutlined />,
+                label: 'История',
+              }
+            ]}
+          />
+          </Footer>
         </Layout>
       </Layout>
     : <Loader isLoading />
