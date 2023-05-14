@@ -29,7 +29,7 @@ function App() {
   return (
     (app.initDataUnsafe && API.id) ?
       <Layout style={{height: '100%'}}>
-        <Header style={{ padding: 0, background: colorBgContainer }}>Head</Header>
+        <Header style={{ padding: 0, background: colorBgContainer }}><div className='logo'/></Header>
         <Content
           style={{
             margin: '24px 16px',

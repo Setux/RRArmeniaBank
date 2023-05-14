@@ -57,13 +57,7 @@ code {
   background-size: contain;
   width: 50px;
   height: 50px;
-}
-
-.logo_text {
-  margin: 0;
-  font-size: 30px;
-  padding: 5px;
-  text-align: center;
+  margin: 0 auto 0 auto;
 }
 
 .profile_container {
