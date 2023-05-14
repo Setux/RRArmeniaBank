@@ -30,7 +30,7 @@ const ProfilePage = () => {
         </div>
         <Divider />
         <div className="profile_action">
-            <Button handleClick={() => console.log('bogdan hui')} icon={<UploadOutlined />}>Вывод средств</Button>
+            <Button type="primary" disabled handleClick={() => console.log('bogdan hui')} icon={<UploadOutlined />}>Вывод средств</Button>
         </div>
     </div> : 
     <Loader isLoading/>}</div>
