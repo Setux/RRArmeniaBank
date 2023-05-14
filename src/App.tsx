@@ -27,7 +27,7 @@ function App() {
   }, [app, API])
 
   return (
-    (app.initDataUnsafe && API.id) ?
+    (app.initDataUnsafe && API.id && false) ?
       <Layout style={{height: '100%'}}>
         <Header style={{ padding: 0, background: colorBgContainer }}><div className='logo'/></Header>
         <Content
