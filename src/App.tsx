@@ -30,68 +30,41 @@ function App() {
   return (
     (app.initDataUnsafe && API.id) ?
       <Layout style={{height: '100%'}}>
-        <Sider collapsible collapsed={collapsed} collapsedWidth={50} width={150} onCollapse={(val) => setCollapsed((val))}>
-          {collapsed ? <div className="logo" /> : <h1 className='logo_text'>CBoAF</h1>}
-          <Menu
-            theme="dark"
-            mode="inline"
-            defaultSelectedKeys={['1']}
-            items={[
-              {
-                key: '1',
-                icon: <UserOutlined />,
-                label: 'Профиль',
-              },
-              {
-                key: '2',
-                icon: <StockOutlined />,
-                label: 'Рынок',
-              },
-              {
-                key: '3',
-                icon: <HistoryOutlined />,
-                label: 'История',
-              }
-            ]}
-          />
-        </Sider>
-        <Layout>
-          <Header style={{ padding: 0, background: colorBgContainer }}>Head</Header>
-          <Content
-            style={{
-              margin: '24px 16px',
-              padding: 24,
-              minHeight: 280,
-              background: colorBgContainer,
-            }}
-          >
-            <ProfilePage />
-          </Content>
-          <Footer>
-          <Menu
-            theme="dark"
-            mode="inline"
-            defaultSelectedKeys={['1']}
-            items={[
-              {
-                key: '1',
-                icon: <UserOutlined />,
-                label: 'Профиль',
-              },
-              {
-                key: '2',
-                icon: <StockOutlined />,
-                label: 'Рынок',
-              },
-              {
-                key: '3',
-                icon: <HistoryOutlined />,
-                label: 'История',
-              }
-            ]}
-          />
-          </Footer>
-        </Layout>
+        <Header style={{ padding: 0, background: colorBgContainer }}>Head</Header>
+        <Content
+          style={{
+            margin: '24px 16px',
+            padding: 24,
+            minHeight: 280,
+            background: colorBgContainer,
+          }}
+        >
+          <ProfilePage />
+        </Content>
+        <Footer>
+        <Menu
+          theme="dark"
+          mode="horizontal"
+          defaultSelectedKeys={['1']}
+          items={[
+            {
+              key: '1',
+              icon: <UserOutlined />,
+              label: 'Профиль',
+            },
+            {
+              key: '2',
+              icon: <StockOutlined />,
+              label: 'Рынок',
+            },
+            {
+              key: '3',
+              icon: <HistoryOutlined />,
+              label: 'История',
+            }
+          ]}
+        />
+        </Footer>
       </Layout>
     : <Loader isLoading />
   );
