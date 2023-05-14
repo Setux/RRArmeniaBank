@@ -51,3 +51,8 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.logo {
+  background: url(./static/img/Group\ 1631.png);
+  width: 40px;
+}
