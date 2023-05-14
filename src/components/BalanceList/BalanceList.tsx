@@ -18,10 +18,10 @@ const BalanceList = ({balance}: Props) => {
     return (
         <>
             <List dataSource={[{resource: "$"}]} grid={{column: 1}} renderItem={(item) => {
-                return <List.Item><Card title={<><FaDollarSign/> Money</>}>{balance[item.resource as "$"]}</Card></List.Item>
+                return <List.Item><Card title={<><FaDollarSign/> Money</>}>{balance[item.resource as "$"].toString().split('').reverse().join('').match(/.{1,3}/g)?.reverse().map(el => el.split('').reverse().join('')).join('.')}</Card></List.Item>
             }}/>
             <List dataSource={RESOURCE_TYPES} grid={{column: 2, gutter: 4}} renderItem={(item) => {
-                return <List.Item><Card title={<>{item.icon} {item.resource}</>}>{(balance[item.resource.toLowerCase() as 'oil' | 'ore' | 'diamond' | 'uranium'] + '').split('').reverse().join('').match(/.{1,3}/g)?.reverse().map(el => el.split('').reverse().join('')).join('.')}</Card></List.Item>
+                return <List.Item><Card title={<>{item.icon} {item.resource}</>}>{balance[item.resource.toLowerCase() as 'oil' | 'ore' | 'diamond' | 'uranium'].toString().split('').reverse().join('').match(/.{1,3}/g)?.reverse().map(el => el.split('').reverse().join('')).join('.')}</Card></List.Item>
             }} />
         </>
     )
