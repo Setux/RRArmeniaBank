@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { apiContext } from "../../contexts/apiContext";
 import { UserResponce } from "../../api";
+import Loader from "../../components/Loader/Loader";
 
 const ProfilePage = () => {
     const API = useContext(apiContext);
@@ -17,7 +18,7 @@ const ProfilePage = () => {
         }
     }, [API])
     
-    return <div>{user.name || 'loading'}</div>
+    return <div>{user.name || <Loader isLoading/>}</div>
 }
 
 export default ProfilePage
