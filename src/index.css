@@ -56,4 +56,5 @@ code {
   background-image: url(./static/img/logo.png);
   background-size: contain;
   width: 40px;
+  height: 40px;
 }
