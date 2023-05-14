@@ -13,7 +13,7 @@ body {
 }
 
 #root {
-  height: 100vh;
+  height: min-content;
   width: 100%;
 }
 
@@ -86,4 +86,8 @@ code {
 
 .profile_action {
   display: flex;
+}
+
+.ant-card-body {
+  padding: 10px 24px;
 }
