@@ -10,14 +10,13 @@ import { webAppContext } from "./contexts/appContext";
 import { useContext, useEffect, useState } from "react";
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 
-const { Header, Sider, Content, Footer } = Layout;
+const { Header, Content, Footer } = Layout;
 
 function App() {
   const app = useContext(webAppContext);
   const API = useContext(apiContext);
 
-  const [collapsed, setCollapsed] = useState(true);
-    const {
+  const {
       token: { colorBgContainer },
     } = theme.useToken();
 
