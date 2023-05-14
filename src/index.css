@@ -93,10 +93,14 @@ code {
   display: flex;
 }
 
+.ant-card-head {
+  min-height: 40px !important;
+}
+
 .ant-card-body {
   padding: 10px 24px !important;
 }
 
 .ant-col>.ant-list-item {
-  margin-block-end: 4px;
+  margin-block-end: 4px !important;
 }
