@@ -75,9 +75,15 @@ code {
 .profile_name {
   display: flex;
   width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .username {
   width: 45%;
   color:#222222;
+}
+
+.profile_action {
+  display: flex;
 }

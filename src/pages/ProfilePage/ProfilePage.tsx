@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { apiContext } from "../../contexts/apiContext";
 import { UserResponce } from "../../api";
-import Divider from 'antd/lib/divider';
+import { Divider } from 'antd';
+import {UploadOutlined} from '@ant-design/icons';
 import Loader from "../../components/Loader/Loader";
 import Avatar from "../../components/Avatar/Avatar";
+import Button from "../../components/Button/Button";
 
 const ProfilePage = () => {
     const API = useContext(apiContext);
@@ -21,7 +23,16 @@ const ProfilePage = () => {
     }, [API])
     
     return <div className="profile_container">{user.name ? 
-    <div className="profile_info"><div className="profile_name"><Avatar url={user.pfp} /><h1 className="username">{user.name}</h1></div><Divider /></div> : 
+    <div className="profile_info">
+        <div className="profile_name">
+            <Avatar url={user.pfp} />
+            <h1 className="username">{user.name}</h1>
+        </div>
+        <Divider />
+        <div className="profile_action">
+            <Button handleClick={() => console.log('bogdan hui')} icon={<UploadOutlined />}>Вывод средств</Button>
+        </div>
+    </div> : 
     <Loader isLoading/>}</div>
 }
 
