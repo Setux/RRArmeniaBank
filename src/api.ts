@@ -1,4 +1,4 @@
-interface GetBalanceResponce<T> {
+export interface GetBalanceResponce<T> {
     $: T;
     ore: T;
     diamond: T;
@@ -7,7 +7,13 @@ interface GetBalanceResponce<T> {
     sell: T;
 }
 
-interface OfferResponce {
+export interface UserResponce {
+    balance: GetBalanceResponce<number>;
+    pfp: string;
+    name: string;
+}
+
+export interface OfferResponce {
     id: number;
     user_id: string;
     type: 'ore' | 'uranium' | 'oil' | 'diamond'
@@ -31,6 +37,12 @@ export class API {
     async getAllOffers() {
         const responce = await fetch('https://api.ryodan.dev/getOffers?type=all')
         const data: OfferResponce[] = await responce.json();
+        return data;
+    }
+
+    async getUser() {
+        const responce = await fetch(`https://api.ryodan.dev/getUser?id=${this.id}`)
+        const data: UserResponce = await responce.json()
         return data;
     }
 }

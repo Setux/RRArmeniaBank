@@ -8,6 +8,7 @@ import Loader from "./components/Loader/Loader";
 import { apiContext } from "./contexts/apiContext";
 import { webAppContext } from "./contexts/appContext";
 import { useContext, useEffect, useState } from "react";
+import ProfilePage from './pages/ProfilePage/ProfilePage';
 
 const { Header, Sider, Content } = Layout;
 
@@ -64,7 +65,7 @@ function App() {
               background: colorBgContainer,
             }}
           >
-            Content
+            <ProfilePage />
           </Content>
         </Layout>
       </Layout>
