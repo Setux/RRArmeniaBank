@@ -31,7 +31,7 @@ function App() {
   return (
     (app.initDataUnsafe && API.id) ?
       <Layout style={{height: '100%'}}>
-        <Sider trigger={null} collapsible collapsed={collapsed} collapsedWidth={40} width={160}>
+        <Sider trigger={null} collapsible collapsed={collapsed} collapsedWidth={40} width={160} onCollapse={(val) => setCollapsed((val))}>
           <div className="logo" />
           <Menu
             theme="dark"
@@ -57,18 +57,7 @@ function App() {
           />
         </Sider>
         <Layout>
-          <Header style={{ padding: 0, background: colorBgContainer }}>
-            <Button
-              type="text"
-              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-              onClick={() => setCollapsed(!collapsed)}
-              style={{
-                fontSize: '16px',
-                width: 64,
-                height: 64,
-              }}
-            />
-          </Header>
+          <Header style={{ padding: 0, background: colorBgContainer }}>Head</Header>
           <Content
             style={{
               margin: '24px 16px',
