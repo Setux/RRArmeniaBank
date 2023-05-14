@@ -23,7 +23,7 @@ const ProfilePage = () => {
         }
     }, [API])
     
-    return <div className="profile_container">{user.name ? 
+    return <div className="profile_container">{user.name && false ? 
     <div className="profile_info">
         <div className="profile_name">
             <Avatar url={user.pfp} />
