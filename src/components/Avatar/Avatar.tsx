@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Avatar = ({url}: Props) => {
-    return <AntAvatar size={120} shape='circle' src={url} />
+    return <AntAvatar size={130} shape='circle' src={url} />
 }
 
 export default Avatar

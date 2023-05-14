@@ -76,3 +76,7 @@ code {
   display: flex;
   width: 100%;
 }
+
+.username {
+  width: 45%;
+}

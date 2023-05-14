@@ -21,7 +21,7 @@ const ProfilePage = () => {
     }, [API])
     
     return <div className="profile_container">{user.name ? 
-    <div className="profile_info"><div className="profile_name"><Avatar url={user.pfp} /><h1>{user.name}</h1></div><Divider /></div> : 
+    <div className="profile_info"><div className="profile_name"><Avatar url={user.pfp} /><h1 className="username">{user.name}</h1></div><Divider /></div> : 
     <Loader isLoading/>}</div>
 }
 
