@@ -5,16 +5,16 @@ import Loader from '../../components/Loader/Loader';
 import { Tabs } from 'antd';
 
 const TAB_PANE = [
-    {label: 'Ore', key: '1'},
-    {label: 'Oil', key: '2'},
-    {label: 'Uranium', key: '3'},
-    {label: 'Diamond', key: '4'}
+    {label: 'Ore', key: 'ore'},
+    {label: 'Oil', key: 'oil'},
+    {label: 'Uranium', key: 'uranium'},
+    {label: 'Diamond', key: 'diamond'}
 ]
 
 const OffersPage = () => {
     const API = useContext(apiContext);
     const [offersList, setOffersList] = useState({} as OfferResponce[])
-    const [activeList, setActiveList] = useState('1')
+    const [activeList, setActiveList] = useState('ore')
 
     useEffect(() => {
         if (API.id) {
