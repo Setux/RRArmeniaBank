@@ -33,13 +33,10 @@ function App() {
     switch (page) {
       case '1':
         return <ProfilePage />
-        break;
       case '2':
         return <OffersPage />
-        break;
       default:
         return <ProfilePage />
-        break;
     }
   }
 
