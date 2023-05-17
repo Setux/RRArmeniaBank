@@ -103,3 +103,7 @@ code {
 .ant-col>.ant-list-item {
   margin-block-end: 4px !important;
 }
+
+.ant-menu-title-content {
+  margin-inline-start: 0px !important;
+}
