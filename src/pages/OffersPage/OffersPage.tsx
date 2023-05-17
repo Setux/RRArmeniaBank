@@ -36,7 +36,7 @@ const OffersPage = () => {
         items={TAB_PANE}
         onChange={(key) => setActiveList(key)}
       />
-        {offersList[0]?.id ? <>jfsdf</>: <Loader isLoading/>}</div>
+        {offersList[0]?.id ? activeList : <Loader isLoading/>}</div>
 }
 
 export default OffersPage
