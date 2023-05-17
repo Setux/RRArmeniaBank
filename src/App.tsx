@@ -8,8 +8,9 @@ import { CgDice6 } from 'react-icons/cg';
 import Loader from "./components/Loader/Loader";
 import { apiContext } from "./contexts/apiContext";
 import { webAppContext } from "./contexts/appContext";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProfilePage from './pages/ProfilePage/ProfilePage';
+import OffersPage from './pages/OffersPage/OffersPage';
 
 const { Header, Content, Footer } = Layout;
 
@@ -17,6 +18,7 @@ function App() {
   const app = useContext(webAppContext);
   const API = useContext(apiContext);
 
+  const [page, setPage] = useState('1')
   const {
       token: { colorBgContainer },
     } = theme.useToken();
@@ -26,6 +28,20 @@ function App() {
       API.getBalance();
     }
   }, [app, API])
+
+  const getPage = () => {
+    switch (page) {
+      case '1':
+        return <ProfilePage />
+        break;
+      case '2':
+        return <OffersPage />
+        break;
+      default:
+        return <ProfilePage />
+        break;
+    }
+  }
 
   return (
     (app.initDataUnsafe && API.id) ?
@@ -39,14 +55,14 @@ function App() {
             background: colorBgContainer,
           }}
         >
-          <ProfilePage />
         </Content>
         <Footer style={{padding: 0, position: 'sticky', bottom: 0, zIndex: 1, width: '100%' }}>
         <Menu
           style={{justifyContent: 'center'}}
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={['1']}
+          defaultSelectedKeys={[page]}
+          onClick={(item) => setPage(item.key)}
           items={[
             {
               key: '1',
