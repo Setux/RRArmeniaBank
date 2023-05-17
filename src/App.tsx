@@ -63,19 +63,19 @@ function App() {
           items={[
             {
               key: '1',
-              icon: <UserOutlined style={{fontSize: "25px"}}/>,
+              icon: <UserOutlined style={{fontSize: "18px"}}/>,
             },
             {
               key: '2',
-              icon: <StockOutlined style={{fontSize: "25px"}}/>,
+              icon: <StockOutlined style={{fontSize: "18px"}}/>,
             },
             {
               key: '3',
-              icon: <HistoryOutlined style={{fontSize: "25px"}}/>,
+              icon: <HistoryOutlined style={{fontSize: "18px"}}/>,
             },
             {
               key: '4',
-              icon: <CgDice6 style={{fontSize: "25px"}}/>
+              icon: <CgDice6 style={{fontSize: "18px"}}/>
             }
           ]}
         />
