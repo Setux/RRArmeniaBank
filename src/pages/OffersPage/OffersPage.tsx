@@ -9,7 +9,8 @@ const TAB_PANE = [
     {label: 'Ore', key: 'ore'},
     {label: 'Oil', key: 'oil'},
     {label: 'Uranium', key: 'uranium'},
-    {label: 'Diamond', key: 'diamond'}
+    {label: 'Diamond', key: 'diamond'},
+    {label: 'My', key: 'my'}
 ]
 
 const OffersPage = () => {
@@ -30,8 +31,10 @@ const OffersPage = () => {
     }, [API])
 
     useEffect(() => {
-        if (offersList[0]?.id) {
-            setVisibleList(offersList.filter(item => item.type === activeList))
+        if (offersList[0]?.id && activeList === 'my') {
+            setVisibleList(offersList.filter(item => item.user_id === API.id.toString()))
+        } else if (offersList[0]?.id) {
+            setVisibleList(offersList.filter(item => item.type === activeList)
         }
     }, [activeList, offersList])
 
