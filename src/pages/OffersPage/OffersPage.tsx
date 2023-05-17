@@ -28,7 +28,7 @@ const OffersPage = () => {
 
     console.log(offersList)
 
-    return <div className='offers_container'>{offersList[0].id ?
+    return <div className='offers_container'>{offersList[0]?.id ?
         <Tabs
         defaultActiveKey="1"
         centered
