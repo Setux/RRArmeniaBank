@@ -4,6 +4,7 @@ import {
   StockOutlined,
   HistoryOutlined
 } from '@ant-design/icons';
+import { CgDice6 } from 'react-icons/cg';
 import Loader from "./components/Loader/Loader";
 import { apiContext } from "./contexts/apiContext";
 import { webAppContext } from "./contexts/appContext";
@@ -50,17 +51,18 @@ function App() {
             {
               key: '1',
               icon: <UserOutlined />,
-              label: 'Профиль',
             },
             {
               key: '2',
               icon: <StockOutlined />,
-              label: 'Рынок',
             },
             {
               key: '3',
               icon: <HistoryOutlined />,
-              label: 'История',
+            },
+            {
+              key: '4',
+              icon: <CgDice6 />
             }
           ]}
         />
