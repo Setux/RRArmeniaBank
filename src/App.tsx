@@ -43,7 +43,7 @@ function App() {
   return (
     (app.initDataUnsafe && API.id) ?
       <Layout style={{minHeight: '100vh'}}>
-        <Header style={{ padding: 0, background: colorBgContainer }}><div className='logo'/></Header>
+        <Header style={{ padding: 0, background: '#001529' }}><div className='logo'/></Header>
         <Content
           style={{
             margin: '24px 16px',
