@@ -100,6 +100,13 @@ code {
   padding: 10px 24px !important;
 }
 
+.ant-menu-item {
+  height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .ant-col>.ant-list-item {
   margin-block-end: 4px !important;
 }
