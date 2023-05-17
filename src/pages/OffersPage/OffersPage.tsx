@@ -14,6 +14,7 @@ const TAB_PANE = [
 const OffersPage = () => {
     const API = useContext(apiContext);
     const [offersList, setOffersList] = useState({} as OfferResponce[])
+    const [activeList, setActiveList] = useState('1')
 
     useEffect(() => {
         if (API.id) {
@@ -28,13 +29,14 @@ const OffersPage = () => {
 
     console.log(offersList)
 
-    return <div className='offers_container'>{offersList[0]?.id ?
+    return <div className='offers_container'>
         <Tabs
-        defaultActiveKey="1"
+        defaultActiveKey={activeList}
         centered
         items={TAB_PANE}
-      /> : 
-         <Loader isLoading/>}</div>
+        onChange={(key) => setActiveList(key)}
+      />
+        {offersList[0]?.id ? <>jfsdf</>: <Loader isLoading/>}</div>
 }
 
 export default OffersPage
