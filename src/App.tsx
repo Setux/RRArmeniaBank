@@ -54,7 +54,7 @@ function App() {
             height: '100%',
             background: colorBgContainer,
           }}
-        >
+        >{getPage()}
         </Content>
         <Footer style={{padding: 0, position: 'sticky', bottom: 0, zIndex: 1, width: '100%' }}>
         <Menu
