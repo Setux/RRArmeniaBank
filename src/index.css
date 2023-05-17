@@ -102,9 +102,10 @@ code {
 
 .ant-menu-item {
   height: 55px;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
+    padding-inline: 32px !important;
 }
 
 .ant-col>.ant-list-item {
