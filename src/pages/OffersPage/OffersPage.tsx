@@ -16,7 +16,7 @@ const OffersPage = () => {
     const API = useContext(apiContext);
     const [offersList, setOffersList] = useState({} as OfferResponce[])
     const [activeList, setActiveList] = useState('ore')
-    // const [visibleList, setVisibleList] = useState([]);
+    const [visibleList, setVisibleList] = useState<OfferResponce[]>([]);
 
     useEffect(() => {
         if (API.id) {
@@ -29,6 +29,12 @@ const OffersPage = () => {
         }
     }, [API])
 
+    useEffect(() => {
+        if (offersList[0]?.id) {
+            setVisibleList(offersList.filter(item => item.type === activeList))
+        }
+    }, [activeList])
+
     console.log(offersList)
 
     return <div className='offers_container'>
@@ -38,7 +44,7 @@ const OffersPage = () => {
         items={TAB_PANE}
         onChange={(key) => setActiveList(key)}
       />
-        {offersList[0]?.id ? <OffersList /> : <Loader isLoading/>}</div>
+        {offersList[0]?.id ? <OffersList list={visibleList}/> : <Loader isLoading/>}</div>
 }
 
 export default OffersPage
