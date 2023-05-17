@@ -2,7 +2,6 @@ import {List, Card, Empty} from 'antd';
 import {BsCart4} from 'react-icons/bs';
 import { OfferResponce } from '../../api';
 
-const mocked_data = [{amount: 1000, price: 82}, {amount: 100005450, price: 85}, {amount: 10, price: 81}, {amount: 10077533330, price: 82}, {amount: 100005450, price: 85}, {amount: 10, price: 81}]
 
 interface Props {
     list: OfferResponce[];

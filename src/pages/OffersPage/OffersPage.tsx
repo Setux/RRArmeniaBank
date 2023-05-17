@@ -33,7 +33,7 @@ const OffersPage = () => {
         if (offersList[0]?.id) {
             setVisibleList(offersList.filter(item => item.type === activeList))
         }
-    }, [activeList])
+    }, [activeList, offersList])
 
     console.log(offersList)
 
