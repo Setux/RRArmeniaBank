@@ -5,10 +5,10 @@ import Loader from '../../components/Loader/Loader';
 import { Tabs } from 'antd';
 
 const TAB_PANE = [
-    {label: 'Ore', key: '1', children: 'ORE'},
-    {label: 'Oil', key: '2', children: 'OIL'},
-    {label: 'Uranium', key: '3', children: 'URANIUM'},
-    {label: 'Diamond', key: '4', children: 'Diamond'}
+    {label: 'Ore', key: '1'},
+    {label: 'Oil', key: '2'},
+    {label: 'Uranium', key: '3'},
+    {label: 'Diamond', key: '4'}
 ]
 
 const OffersPage = () => {
