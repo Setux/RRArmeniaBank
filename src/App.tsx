@@ -46,7 +46,6 @@ function App() {
         <Header style={{ padding: 0, background: '#001529' }}><div className='logo'/></Header>
         <Content
           style={{
-            margin: '24px 16px',
             padding: 24,
             height: '100%',
             background: colorBgContainer,
